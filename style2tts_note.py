@@ -17,3 +17,6 @@ for k, path in reference_dicts.items():
     display(ipd.Audio(wav, rate=24000, normalize=False))
     print('Reference:')
     display(ipd.Audio(path, rate=24000, normalize=False))
+
+# This one cool too (using suggestions.wav as reference also):
+wav = inference(text, ref_s, alpha=0.1, beta=0.1, diffusion_steps=10, embedding_scale=2)
